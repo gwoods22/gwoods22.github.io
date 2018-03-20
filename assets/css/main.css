@@ -7,16 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+	/* Panel & Column Intro */
 	.desktop { display: inline; }
 	.mobile { display: none; }
 
-	/* Smartphone Portrait and Landscape */
-	@media only screen
-		and (min-device-width : 320px)
-		and (max-device-width : 980px){
-		 	.desktop { display: none;}
-			.mobile { display: inline;}
-		}
 
 
 
@@ -917,6 +911,9 @@
 	}
 
 	@media screen and (max-width: 980px) {
+		/* Column Intro */
+		.desktop { display: none;}
+		.mobile { display: inline;}
 
 		.row > * {
 			padding: 0 0 0 2em;
@@ -1132,6 +1129,9 @@
 	}
 
 	@media screen and (max-width: 736px) {
+		/* Column Intro */
+		.desktop { display: none;}
+		.mobile { display: inline;}
 
 		.row > * {
 			padding: 0 0 0 1.5em;
@@ -1347,6 +1347,9 @@
 	}
 
 	@media screen and (max-width: 480px) {
+		/* Column Intro */
+		.desktop { display: none;}
+		.mobile { display: inline;}
 
 		.row > * {
 			padding: 0 0 0 1.5em;
