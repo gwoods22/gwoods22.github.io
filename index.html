@@ -65,7 +65,7 @@
 							<center>
 								<!-- Natour-->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/wojtczat/natour">
+									<a target="_blank" class="projectLink" href="https://github.com/wojtczat/natour/" onclick="trackOutboundLink('https://github.com/wojtczat/natour/'); return false;">
 										<h3>Natour</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/natour.jpg" alt="Natour project screenshot" style="max-width: 80%"/>
@@ -82,7 +82,7 @@
 
 								<!-- Agraemeio -->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/agraemeio">
+									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/agraemeio/" onclick="trackOutboundLink('https://github.com/gwoods22/agraemeio/'); return false;">
 										<h3>Agraeme.io</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/agraemeio.jpg" alt="Agraemeio project screenshot" style="max-width: 80%"/>
@@ -99,7 +99,7 @@
 
 								<!-- Circus Circles -->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/Circus-Circles">
+									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/Circus-Circles/" onclick="trackOutboundLink('https://github.com/gwoods22/Circus-Circles/'); return false;">
 										<h3>Circus Circles</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/circus.jpg" alt="Circus Circles project screenshot" style="max-width: 80%"/>
@@ -163,9 +163,9 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a name="Graeme Woods LinkedIn" rel="me" target="_blank" href="https://www.linkedin.com/in/graemewoods/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a name="Graeme Woods Github" rel="me" target="_blank" href="https://github.com/gwoods22" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a name="Graeme Woods Twitter" rel="me" target="_blank" href="https://twitter.com/graemewoods22" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a name="Graeme Woods LinkedIn" rel="me" target="_blank" href="https://www.linkedin.com/in/graemewoods/" onclick="trackOutboundLink('https://www.linkedin.com/in/graemewoods/'); return false;"class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a name="Graeme Woods Github" rel="me" target="_blank" href="https://github.com/gwoods22/" onclick="trackOutboundLink('https://github.com/gwoods22/'); return false;"class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a name="Graeme Woods Twitter" rel="me" target="_blank" href="https://twitter.com/graemewoods22/" onclick="trackOutboundLink('https://twitter.com/graemewoods22/'); return false;" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a name="Graeme Woods Email" href="mailto:graemewoods202@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						<li><a name="Graeme Woods Phone" href="tel:+17057940402" class="icon fa-phone"><span class="label">Phone</span></a></li>
 					</ul>
@@ -184,6 +184,20 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+			* using 'navigator.sendBeacon' in browser that support it.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {
+			     'transport': 'beacon',
+			     'hitCallback': function(){document.location = url;}
+			   });
+			}
+			</script>
 
 	</body>
 </html>
