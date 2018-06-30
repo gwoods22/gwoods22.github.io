@@ -1,48 +1,41 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121659899-1"></script>
+		<!-- Google Analytics -->
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  gtag('config', 'UA-121659899-1');
+			ga('create', 'UA-121659899-1', 'auto');
+			ga('send', 'pageview');
+			ga('require', 'outboundLinkTracker');
+
 		</script>
-		<script>
-		/**
-		* Function that tracks a click on an outbound link in Analytics.
-		* This function takes a valid URL string as an argument, and uses that URL string
-		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-		* using 'navigator.sendBeacon' in browser that support it.
-		*/
-		var trackOutboundLink = function(url) {
-			 ga('send', 'event', 'outbound', 'click', url, {
-				 'transport': 'beacon',
-				 'hitCallback': function(){document.location = url;}
-			 });
-		}
-		</script>
+		<!-- End Google Analytics -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+
 		<script>
 			var giver = function() { alert('see ya')}
 		</script>
 
-		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+		<link rel="shortcut icon" href="assets/images/favicon.ico"/>
 		<title>Graeme Woods</title>
 		<meta name="description" content="Graeme Woods, a software engineering student at McMaster
-					University looking for a summer co-op placement." />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+					University looking for a summer co-op placement."/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
 	</head>
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="assets/images/avatar.jpg" alt="Graeme Woods Avatar" /></a>
+					<a href="#" class="image avatar"><img src="assets/images/avatar.jpg" alt="Graeme Woods Avatar"/></a>
 					<h2><strong>Graeme Woods</strong></h2>
 					<h3>Software Engineering Student</h3>
 					I am the algorithm fanatic, front end wizard, and
@@ -81,7 +74,7 @@
 							<center>
 								<!-- Natour-->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/wojtczat/natour/" onclick="return trackOutboundLink('https://github.com/wojtczat/natour/');">
+									<a target="_blank" class="projectLink" href="https://github.com/wojtczat/natour/">
 										<h3>Natour</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/natour.jpg" alt="Natour project screenshot" style="max-width: 80%"/>
@@ -98,7 +91,7 @@
 
 								<!-- Agraemeio -->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/agraemeio/" onclick="return trackOutboundLink('https://github.com/gwoods22/agraemeio/');">
+									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/agraemeio/">
 										<h3>Agraeme.io</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/agraemeio.jpg" alt="Agraemeio project screenshot" style="max-width: 80%"/>
@@ -115,7 +108,7 @@
 
 								<!-- Circus Circles -->
 								<div>
-									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/Circus-Circles/" onclick="return trackOutboundLink('https://github.com/gwoods22/Circus-Circles/');">
+									<a target="_blank" class="projectLink" href="https://github.com/gwoods22/Circus-Circles/">
 										<h3>Circus Circles</h3>
 										<span class="fit">
 											<img class="shadow" src="assets/images/circus.jpg" alt="Circus Circles project screenshot" style="max-width: 80%"/>
@@ -156,17 +149,17 @@
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<h3 align="center">Mountain Biking</h3>
-								<a class="image fit"><img src="assets/images/bike.jpg" alt="Graeme mountain biking" /></a>
+								<a class="image fit"><img src="assets/images/bike.jpg" alt="Graeme mountain biking"/></a>
 							</article>
 
 							<article class="6u$ 12u$(xsmall) work-item">
 								<h3 align="center">Ultimate Frisbee</h3>
-								<a class="image fit"><img src="assets/images/ulti.jpg" alt="Graeme playing ultimate frisbee" /></a>
+								<a class="image fit"><img src="assets/images/ulti.jpg" alt="Graeme playing ultimate frisbee"/></a>
 							</article>
 							<center>
 								<article class="6u 12u$(xsmall) work-item">
 									<h3 align="center">Hackathons</h3>
-									<a class="image fit"><img src="assets/images/hack.jpg" alt="Graeme at a hackathon" /></a>
+									<a class="image fit"><img src="assets/images/hack.jpg" alt="Graeme at a hackathon"/></a>
 								</article>
 							</center>
 						</div>
@@ -179,9 +172,9 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a name="Graeme Woods LinkedIn" rel="me" target="_blank" href="https://www.linkedin.com/in/graemewoods/" onclick="return trackOutboundLink('https://www.linkedin.com/in/graemewoods/');"class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a name="Graeme Woods Github" rel="me" target="_blank" href="https://github.com/gwoods22/" onclick="return trackOutboundLink('https://github.com/gwoods22/');"class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a name="Graeme Woods Twitter" rel="me" target="_blank" href="https://twitter.com/graemewoods22/" onclick="return trackOutboundLink('https://twitter.com/graemewoods22/');" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a name="Graeme Woods LinkedIn" rel="me" target="_blank" href="https://www.linkedin.com/in/graemewoods/">LinkedIn</span></a></li>
+						<li><a name="Graeme Woods Github" rel="me" target="_blank" href="https://github.com/gwoods22/">Github</span></a></li>
+						<li><a name="Graeme Woods Twitter" rel="me" target="_blank" href="https://twitter.com/graemewoods22/">Twitter</span></a></li>
 						<li><a name="Graeme Woods Email" href="mailto:graemewoods202@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						<li><a name="Graeme Woods Phone" href="tel:+17057940402" class="icon fa-phone"><span class="label">Phone</span></a></li>
 					</ul>
