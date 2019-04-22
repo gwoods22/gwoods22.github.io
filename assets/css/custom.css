@@ -1,0 +1,18 @@
+.video-hero {
+  background-image: none !important
+}
+.video-hero h3 {
+  text-transform: none;
+  text-align: center;
+}
+.photos {
+  padding-bottom: 0px;
+}
+.photos .col-6 {
+  padding-bottom: 40px;
+}
+#footer .icon.circle {
+  background-color: #83d3c9;
+  border-color: #83d3c9;
+  color: #fff;
+}
