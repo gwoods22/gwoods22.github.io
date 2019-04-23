@@ -1,16 +1,6 @@
 #!/bin/bash
 
 #DOCUMENTATION
-<<<<<<< HEAD
-# createPR _message_
-
-git add .
-git commit -m "$1"
-git push
-url=`hub pull-request -m "$1"`
-git checkout master
-hub merge $url
-=======
 #PR _branch_ _message_
 
 git checkout $1
@@ -19,13 +9,13 @@ git commit -m "$2"
 git push
 echo "Changes pushed\n"
 
-url=`echo hub pull-request -m "$2"`
+url=`hub pull-request -m "$2"`
 echo "Pull request created\n"
 
 git checkout master
-hub merge $url 
+hub merge $url
 git push
 echo "Pull request merged and pushed\n"
 
 git checkout $1
->>>>>>> 379e6748125877ff0b6411612e94fffd69b35c2b
+git pull origin master
