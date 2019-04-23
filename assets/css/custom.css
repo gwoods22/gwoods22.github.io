@@ -12,9 +12,6 @@
 .photos {
   padding-bottom: 0px;
 }
-.photos .col-6 {
-  padding-bottom: 40px;
-}
 .image:before {
   background: none;
 }
