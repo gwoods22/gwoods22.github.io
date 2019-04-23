@@ -18,12 +18,14 @@
 .image:before {
   background: none;
 }
+#footer {
+    padding: 4em !important;
+}
 #footer .icon.circle {
   background-color: #83d3c9;
   border-color: #83d3c9;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   .video-hero iframe {
     height: 400px
