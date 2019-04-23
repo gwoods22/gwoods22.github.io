@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#DOCUMENTATION
+#PR _branch_ _message_
+
+git checkout $1
+git add .
+git commit -m "$2"
+git push
+url=`echo hub pull-request -m "$2"`
+git checkout master
+hub merge $url 
+git push
