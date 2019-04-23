@@ -7,15 +7,15 @@ git checkout $1
 git add .
 git commit -m "$2"
 git push
-echo "Changes pushed\n"
+echo -e "\nChanges pushed\n"
 
 url=`hub pull-request -m "$2"`
-echo "Pull request created\n"
+echo -e "\nPull request created\n"
 
 git checkout master
 hub merge $url
 git push
-echo "Pull request merged and pushed\n"
+echo -e "\nPull request merged and pushed\n"
 
 git checkout $1
 git pull origin master
