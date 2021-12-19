@@ -3,3 +3,4 @@ assets/images/other
 log
 .DS_Store
 backup
+*.sh
